@@ -63,10 +63,10 @@ Si el enemigo alcanza al jugador, se pierde y aparece un mensaje en pantalla con
 ---
 
 ## 🏁 Cómo jugar
-1. Abre el proyecto `UT4_AE1_Erico` en Unity 6.0.
-2. Carga el nivel 1 para poder jugarlo  
-3. Pulsa **Play**.  
-4. Mueve la bola, recoge todos los pickups y evita al enemigo.  
+1. Puedes usar el Zip del código y extraerlo en un carpeta.
+2. Seleccionar en el Unity Hub la carpeta extraida.
+3. Una vez que haya cargado completamente Unity, tenemos que cargar la escena la cual es ....Erico-master\Assets\Scenes\nivel1
+4. Empezar a jugar.
 5. Si ganas o pierdes, pulsa **R** para volver a empezar.
 
 ---
