@@ -63,10 +63,11 @@ Si el enemigo alcanza al jugador, se pierde y aparece un mensaje en pantalla con
 ---
 
 ## 🏁 Cómo jugar
-1. Abre el proyecto `UT4_AE1_Erico` en Unity 6.0.  
-2. Pulsa **Play**.  
-3. Mueve la bola, recoge todos los pickups y evita al enemigo.  
-4. Si ganas o pierdes, pulsa **R** para volver a empezar.
+1. Abre el proyecto `UT4_AE1_Erico` en Unity 6.0.
+2. Carga el nivel 1 para poder jugarlo  
+3. Pulsa **Play**.  
+4. Mueve la bola, recoge todos los pickups y evita al enemigo.  
+5. Si ganas o pierdes, pulsa **R** para volver a empezar.
 
 ---
 
