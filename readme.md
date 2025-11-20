@@ -70,13 +70,49 @@ Si el enemigo alcanza al jugador, se pierde y aparece un mensaje en pantalla con
 5. Si ganas o pierdes, pulsa **R** para volver a empezar.
 
 ---
+# 🆕 Versión 2.0 – Entrega Final
+
+En esta actualización final del proyecto he añadido y mejorado varios aspectos importantes para completar la práctica de forma más profesional y pulida.
+
+## 🌟 Novedades principales
+
+### ✔️ Menú principal funcional
+- Botón para acceder al **Nivel 1**  
+- Botón para acceder al **Nivel 2 (Nivel Extra para cumplir con lo de tener varias escenas.)**  
+- Botón **Salir**  
+- Texto personalizado  
+- Imagen de fondo diseñada exclusivamente para el menú
+
+### ✔️ Nivel extra (Nivel 2)
+- Nuevo escenario totalmente jugable  
+- Distribución diferente de pickups  
+- Más enemigos y obstáculos  
+- Textos de victoria y derrota funcionando  
+- NavMesh configurado correctamente
+
+### ✔️ Fondo personalizado en el menú
+Añadida una imagen creada especialmente para el juego:  
+**“Juego de Bolas – Práctica”**  
+con la firma:  
+**“Creado por Erico Pérez Cárdenes”**
+
 
 ## 📸 Capturas de pantalla
 ![Juego](images/1.jpg)
 ![Derrota](images/2.jpg)
 ![Pantalla de victoria](images/3.jpg)
 
----
+# 📸 Capturas de pantalla Versión 2.0 – Entrega Final
+![Menú](https://github.com/user-attachments/assets/f51a36da-2745-4ed6-a085-0806a81ad8a4)
+![Nivel 1](https://github.com/user-attachments/assets/747218c3-1a76-42fc-bbf9-db6043eb4a53)
+![nivel 2](https://github.com/user-attachments/assets/e0dab38c-0223-4328-b1cd-bea6b8fe9bc4)
+![Victoria ir al menú](https://github.com/user-attachments/assets/11ac6ecc-4adb-4a7f-9e3d-8e3f22f06b72)
+![Derrota](https://github.com/user-attachments/assets/c0873926-0d76-4161-8dbd-f99362da8156)
+![puntuación](https://github.com/user-attachments/assets/7f9c9e55-3a8e-4319-8ee0-c4bcf4501384)
+
+
+
+
 
 ## 📚 Créditos
 Proyecto desarrollado por **Erico Pérez Cárdenes** como parte de la asignatura **PGL**.  
