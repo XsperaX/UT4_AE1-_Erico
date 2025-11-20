@@ -1,4 +1,7 @@
-# 🎮 Roll-a-Ball (Versión Mejorada)
+
+<img width="1024" height="1024" alt="Juego de Bolas" src="https://github.com/user-attachments/assets/e6aafeaf-d9f5-4569-98b1-95c4c7152d14" />
+
+# 🎮 Juego de Bolas Erico (Versión Mejorada)
 
 **Autor:** Erico Pérez Cárdenes  
 **Asignatura:** PGL  
