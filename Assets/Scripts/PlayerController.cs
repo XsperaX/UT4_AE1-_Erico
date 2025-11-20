@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
     public TMP_Text ScoreText;
-    public TMP_Text winText;
+    public TMP_Text winText;    // Texto de victoria
+    public TMP_Text loseText;   // Texto de derrota
     public float speed;
     public float jumpForce = 5f; //Con esto determino la fuerza de salto
     private bool isGrounded = true; //Para evitar saltos continuos, compruebo que ha llegado al suelo.
@@ -19,7 +21,10 @@ public class PlayerController : MonoBehaviour
         count = 0; //hacer que el contador esté a 0
         SetScoreText();
         rb = GetComponent<Rigidbody>();
+
+        // Ocultamos los textos al empezar
         winText.gameObject.SetActive(false);
+        loseText.gameObject.SetActive(false);
     }
 
     // FixedUpdate el que explicaste tiburcio que era para las físicas.
@@ -37,6 +42,18 @@ public class PlayerController : MonoBehaviour
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isGrounded = false; // evita saltos dobles
+        }
+
+        // ⭐ Si ganas → volver al menú pulsando M
+        if (winText.gameObject.activeSelf && Keyboard.current.mKey.wasPressedThisFrame)
+        {
+            SceneManager.LoadScene("Menu_Principal");
+        }
+
+        // ⭐ Si pierdes → reiniciar con R
+        if (loseText.gameObject.activeSelf && Keyboard.current.rKey.wasPressedThisFrame)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 
@@ -71,14 +88,14 @@ public class PlayerController : MonoBehaviour
             isGrounded = true;
         }
 
+        // Si toca al enemigo → pierdes
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            // Destruye el jugador
-            Destroy(gameObject);
+            Destroy(gameObject); // Destruye el jugador
 
-            // Pone que pierdes
-            winText.gameObject.SetActive(true);
-            winText.text = "¡Que lástima! ¡Has perdido!\nPulsa R para reiniciar";
+            // Mostrar mensaje de derrota
+            loseText.gameObject.SetActive(true);
+            loseText.text = "¡Qué lástima! ¡Has perdido!\nPulsa R para reiniciar";
         }
     }
 
@@ -90,8 +107,14 @@ public class PlayerController : MonoBehaviour
         if (count >= 12)
         {
             winText.gameObject.SetActive(true);
-            winText.text = "¡Has ganado!\nPulsa R para reiniciar"; // Mensaje al ganar
-            Destroy(GameObject.FindGameObjectWithTag("Enemy")); //Destruimos al malote al ganar
+            winText.text = "¡Has ganado!\nPulsa M para volver al menú principal";
+
+            //Destruimos a todos los enemigos al ganar
+            GameObject[] enemigos = GameObject.FindGameObjectsWithTag("Enemy");
+            foreach (GameObject enemigo in enemigos)
+            {
+                Destroy(enemigo);
+            }
         }
     }
 }

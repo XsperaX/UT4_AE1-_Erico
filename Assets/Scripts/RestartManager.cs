@@ -1,20 +1,22 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
 public class RestartManager : MonoBehaviour
 {
-    public TMP_Text winText; // Referencia al texto de ganar/perder
+    public TMP_Text winText;   // Texto de victoria
+    public TMP_Text loseText;  // Texto de derrota
 
     void Update()
     {
-        // Solo permite reiniciar si el texto de ganar/perder est� activo
-        if (winText != null && winText.gameObject.activeSelf)
+        // Si aparece el texto de victoria o derrota → permitir reiniciar
+        bool canRestart =
+            (winText != null && winText.gameObject.activeSelf) ||
+            (loseText != null && loseText.gameObject.activeSelf);
+
+        if (canRestart && Input.GetKeyDown(KeyCode.R))
         {
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            }
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }
