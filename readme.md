@@ -53,6 +53,7 @@ Si el enemigo alcanza al jugador, se pierde y aparece un mensaje en pantalla con
   - `CameraController.cs`: sigue al jugador durante la partida.
 - **Escenas:**
   - `Level1`: escenario principal con el jugador, los pickups y el enemigo.
+  - Nivel con música
 
 ---
 
@@ -85,6 +86,7 @@ En esta actualización final del proyecto he añadido y mejorado varios aspectos
 - Botón **Salir**  
 - Texto personalizado  
 - Imagen de fondo diseñada exclusivamente para el menú
+- Añadida música en el menú
 
 ### ✔️ Nivel extra (Nivel 2)
 - Nuevo escenario totalmente jugable  
@@ -92,6 +94,7 @@ En esta actualización final del proyecto he añadido y mejorado varios aspectos
 - Más enemigos y obstáculos  
 - Textos de victoria y derrota funcionando  
 - NavMesh configurado correctamente
+- Música personalizada para el nivel
 
 ### ✔️ Fondo personalizado en el menú
 Añadida una imagen creada especialmente para el juego:  
